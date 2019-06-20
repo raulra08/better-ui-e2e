@@ -95,3 +95,53 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Links & Resources
+
+Dan North, Behavior Modification. The evolution of behavior-driven development,
+[link](https://www.stickyminds.com/better-software-magazine/behavior-modification).
+
+Stickyminds, 2006
+
+---
+
+Dan North & Liz Keogh, Interview with Dan North on Behavior-Driven Development,
+[link](https://youtu.be/qWsnmx45734)
+
+YouTube, 2012
+
+---
+
+Liz Keogh, Re: Is it possible to use DDD and BDD together?,
+[link](https://stackoverflow.com/a/7152118)
+
+StackOverflow, 2011
+
+---
+
+Liz Keogh, What contexts should we include in a scenario?,
+[link](https://stackoverflow.com/a/56002442)
+
+StackOverflow, 2019
+
+---
+
+Dan North, BDD and DDD,
+[link](https://www.infoq.com/presentations/bdd-and-ddd/)
+
+QCon, 2009
+
+---
+
+Jason Gorman, TDD, 
+[link](http://codemanship.co.uk/tdd_jasongorman_codemanship.pdf)
+
+Codemanship Ltd, 2016
+
+---
+Liz Keogh, Behaviour-Driven Development, Using examples in conversations to illustrate behaviour,
+[link](https://leanpub.com/bdd)
+
+Leanpub, 2016
+
+--- 
