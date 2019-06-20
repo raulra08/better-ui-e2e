@@ -98,6 +98,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Links & Resources
 
+## Webs/Articles
+
 Dan North, Behavior Modification. The evolution of behavior-driven development,
 [link](https://www.stickyminds.com/better-software-magazine/behavior-modification).
 
@@ -133,6 +135,8 @@ QCon, 2009
 
 ---
 
+## Books
+
 Jason Gorman, TDD, 
 [link](http://codemanship.co.uk/tdd_jasongorman_codemanship.pdf)
 
@@ -145,3 +149,5 @@ Liz Keogh, Behaviour-Driven Development, Using examples in conversations to illu
 Leanpub, 2016
 
 --- 
+
+
