@@ -62,7 +62,7 @@ A scenario is an example of the system's behaviour from one or more user's persp
     Bonus: Why might that be useful?
 
 
-# Code
+# Dog Sitter App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
