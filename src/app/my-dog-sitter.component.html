@@ -1,5 +1,48 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class="container">
+    <h1>
+        Welcome to {{ title }}!
+    </h1>
+</div>
+<div class="container">
+    <h2>
+        Publish
+    </h2>
+    <form [formGroup]="petsForm" (ngSubmit)="onSubmit(petsForm.value)">
+        <div class="form-group">
+            <label id="mds-dog-name-form-label">Dog's Name</label>
+            <input id="mds-dog-name-form-input" formControlName="name" type="text" class="form-control" placeholder="Gia">
+        </div>
+        <div class="form-group">
+            <label id="mds-dog-breed-form-label">Dog's Breed</label>
+            <select class="form-control" id="mds-dog-breed-form-select" formControlName="breed">
+                <option>Beagle</option>
+                <option>Golden Retriever</option>
+                <option>Jack Rusell</option>
+                <option>Terrier</option>
+                <option>Chihuahua</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label id="mds-dog-duration-form-label">Care duration</label>
+            <select class="form-control" id="mds-dog-duration-form-select" formControlName="duration">
+                <option>1/2 day</option>
+                <option>1 day</option>
+                <option>1 weekend</option>
+                <option>1 week</option>
+                <option>2 weeks</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" id="mds-publish-button">Publish</button>
+    </form>
+    <div class="row">
+        <div class="col-sm">
+            <label id="mds-dog-name-label" >{{name}}</label>
+        </div>
+        <div class="col-sm">
+            <label id="mds-dog-breed-label">{{breed}}</label>
+        </div>
+        <div class="col-sm">
+            <label id="mds-dog-duration-label">{{duration}}</label>
+        </div>
+    </div>
 </div>

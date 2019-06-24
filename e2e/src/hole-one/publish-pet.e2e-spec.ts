@@ -1,18 +1,21 @@
-import { MyDogSitterPage } from '../app.po';
-import { browser, logging } from 'protractor';
+import {MyDogSitterPage} from '../app.po';
+
+let page: MyDogSitterPage;
+
+beforeAll(() => {
+  page = new MyDogSitterPage();
+  page.navigateTo();
+});
 
 describe("Given Freddy Fastfinger is going on a 2 weeks holiday", () => {
-  let page: MyDogSitterPage;
-
-  beforeEach(() => {
-    page = new MyDogSitterPage();
-  });
 
   describe("When Freddy is publishing Gia the beagle on the web", () => {
 
     it("Then Freddy should be able to publish temporary care for a duration of 2 weeks", () => {
-      page.navigateTo();
-      expect(page.getTitleText()).toEqual('Welcome to My Dog Sitter!');
+
+      page.enterDogsName("Gia");
+      page.publish();
+      expect(page.readDogsName()).toEqual("Gia");
     });
 
   });
