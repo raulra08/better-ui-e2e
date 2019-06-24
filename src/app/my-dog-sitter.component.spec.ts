@@ -1,5 +1,5 @@
 import {async, TestBed} from '@angular/core/testing';
-import {DogSitterAppComponent} from './dog-sitter-app.component';
+import {MyDogSitterComponent} from './my-dog-sitter.component';
 
 describe("The DogSitterAppComponent", () => {
 
@@ -7,13 +7,13 @@ describe("The DogSitterAppComponent", () => {
         beforeEach(async(() => {
             TestBed.configureTestingModule({
                 declarations: [
-                    DogSitterAppComponent
+                    MyDogSitterComponent
                 ],
             }).compileComponents();
         }));
 
         it('should create the app', () => {
-            const fixture = TestBed.createComponent(DogSitterAppComponent);
+            const fixture = TestBed.createComponent(MyDogSitterComponent);
             const app = fixture.debugElement.componentInstance;
             expect(app).toBeTruthy();
         });

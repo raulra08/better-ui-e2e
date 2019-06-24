@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { DogSitterAppComponent } from './dog-sitter-app.component';
+import { MyDogSitterComponent } from './my-dog-sitter.component';
 
 @NgModule({
   declarations: [
-    DogSitterAppComponent
+    MyDogSitterComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [DogSitterAppComponent]
+  bootstrap: [MyDogSitterComponent]
 })
 export class AppModule { }
