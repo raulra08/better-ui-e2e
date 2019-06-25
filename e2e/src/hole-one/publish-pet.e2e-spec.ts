@@ -1,4 +1,4 @@
-import {MyDogSitterPage} from '../app.po';
+import {MyDogSitterPage} from './publish-pet.po';
 
 let page: MyDogSitterPage;
 
