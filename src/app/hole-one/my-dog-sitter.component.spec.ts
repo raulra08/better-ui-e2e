@@ -1,14 +1,17 @@
 import {async, TestBed} from '@angular/core/testing';
 import {MyDogSitterComponent} from './my-dog-sitter.component';
 import {FormBuilder, ReactiveFormsModule} from "@angular/forms";
+import {IPublishedPet, SharedStoreService} from "../core/shared-store.service";
 
 describe("The DogSitterAppComponent", () => {
 
     describe("TestBed", () => {
         let formBuilder: FormBuilder;
+        let sharedStoreService: SharedStoreService;
 
         beforeEach(async(() => {
             formBuilder = new FormBuilder();
+            sharedStoreService = new SharedStoreService();
 
             TestBed.configureTestingModule({
                 declarations: [
@@ -18,6 +21,7 @@ describe("The DogSitterAppComponent", () => {
                     ReactiveFormsModule
                 ],
                 providers: [
+                    {provide: SharedStoreService, useValue: sharedStoreService },
                     {provide: FormBuilder, useValue: formBuilder }
                 ]
             }).compileComponents();
@@ -30,11 +34,18 @@ describe("The DogSitterAppComponent", () => {
         });
     });
 
-    describe("#onSubmit", () => {
-        it("should set the class' dog name with the submited dog name", () => {
-            const component: MyDogSitterComponent = new MyDogSitterComponent(new FormBuilder());
-            component.onSubmit({name: "Gia", breed: "Beagle", duration: "1/2 day"});
-            expect(component.name).toEqual("Gia")
+    describe("Class", () => {
+
+        describe("#onSubmit", () => {
+            it("should save the published pet to the shared store", () => {
+                const sharedStoreService: SharedStoreService = new SharedStoreService();
+                const somePet: IPublishedPet = {name: "", breed: "", duration: ""};
+
+                const component: MyDogSitterComponent = new MyDogSitterComponent(sharedStoreService, new FormBuilder());
+
+                component.onSubmit(somePet);
+                expect(sharedStoreService.publishedPet).toBeDefined();
+            });
         });
     });
 });

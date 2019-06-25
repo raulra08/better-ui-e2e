@@ -16,10 +16,10 @@
             <label id="mds-dog-breed-form-label">Dog's Breed</label>
             <select class="form-control" id="mds-dog-breed-form-select" formControlName="breed">
                 <option>Beagle</option>
+                <option>Labrador</option>
                 <option>Golden Retriever</option>
-                <option>Jack Rusell</option>
-                <option>Terrier</option>
-                <option>Chihuahua</option>
+                <option>Cocker Spaniel</option>
+                <option>Hungarian Viszla</option>
             </select>
         </div>
         <div class="form-group">
@@ -36,13 +36,13 @@
     </form>
     <div class="row">
         <div class="col-sm">
-            <label id="mds-dog-name-label" >{{name}}</label>
+            <label id="mds-dog-name-label" >{{sharedStoreService.publishedPet.name}}</label>
         </div>
         <div class="col-sm">
-            <label id="mds-dog-breed-label">{{breed}}</label>
+            <label id="mds-dog-breed-label">{{sharedStoreService.publishedPet.breed}}</label>
         </div>
         <div class="col-sm">
-            <label id="mds-dog-duration-label">{{duration}}</label>
+            <label id="mds-dog-duration-label">{{sharedStoreService.publishedPet.duration}}</label>
         </div>
     </div>
 </div>

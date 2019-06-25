@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {IPublishedPet, SharedStoreService} from "../core/shared-store.service";
 
 @Component({
   selector: "my-dog-sitting",
@@ -9,15 +10,10 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 export class MyDogSitterComponent implements OnInit {
 
   title = "My Dog Sitter";
-
   petsForm: FormGroup;
 
-  name: string;
-  breed: string;
-  duration: string;
-
-  constructor(private formBuilder: FormBuilder) {
-
+  constructor(private sharedStoreService: SharedStoreService,
+              private formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
@@ -28,10 +24,7 @@ export class MyDogSitterComponent implements OnInit {
     })
   }
 
-  onSubmit(publishedData: any): void {
-    console.log("Submited data", publishedData);
-    this.name = publishedData.name;
-    this.breed = publishedData.breed;
-    this.duration = publishedData.duration;
+  onSubmit(publishedData: IPublishedPet): void {
+    this.sharedStoreService.publishedPet = publishedData;
   }
 }
