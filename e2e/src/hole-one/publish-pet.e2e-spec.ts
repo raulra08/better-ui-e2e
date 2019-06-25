@@ -1,25 +1,21 @@
-import {MyDogSitterPage} from './publish-pet.po';
-
-let page: MyDogSitterPage;
+import {browser, by, element} from "protractor";
 
 beforeAll(() => {
-  page = new MyDogSitterPage();
-  page.navigateTo();
+    browser.get(browser.baseUrl) as Promise<any>;
 });
 
-describe("Given Freddy Fastfinger is going on a 2 weeks holiday", () => {
+describe("Given Freddy Fastfinger opens the duration dropdown menu", () => {
 
-  describe("When Freddy is publishing Gia the beagle on the web", () => {
+    describe("When Freddy clicks on '2 weeks'", () => {
 
-    it("Then Freddy should be able to publish temporary care for a duration of 2 weeks", () => {
+        it("Then Freddy should see the text '2 weeks'", () => {
 
-      page.enterDogsName("Gia");
-      page.selectBreed();
-      page.selectDuration();
-      page.publish();
-      expect(page.readDuration()).toEqual("2 weeks");
+            element(by.id("mds-dog-duration-form-select")).click();
+            element(by.id("mds-dog-duration-option-5")).click();
+            element(by.css("form")).click();
+            expect(element(by.id("mds-dog-duration-label")).getText()).toEqual("2 weeks");
+        });
+
     });
-
-  });
 
 });
