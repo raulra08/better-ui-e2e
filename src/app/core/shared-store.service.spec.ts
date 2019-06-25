@@ -1,4 +1,4 @@
-import {IPublishedPet, SharedStoreService} from "./shared-store.service";
+import {SharedStoreService} from "./shared-store.service";
 
 describe("The SharedStoreService", () => {
 
@@ -12,13 +12,7 @@ describe("The SharedStoreService", () => {
         expect(service).toBeTruthy();
     });
 
-    it("should store a pet that has been published", () => {
-        const giaTheBeagle: IPublishedPet = {
-            name: "Gia",
-            breed: "Beagle",
-            duration: "someTime",
-        };
-        service.publishedPet = giaTheBeagle;
-        expect(service.publishedPet).toEqual(giaTheBeagle)
+    it("should initialise publishedPet", () => {
+        expect(service.publishedPet).toBeDefined();
     });
 });

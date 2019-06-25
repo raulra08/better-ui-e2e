@@ -6,16 +6,22 @@ import { Injectable } from "@angular/core";
 export class SharedStoreService {
 
   get publishedPet(): IPublishedPet {
-    return this._publishedPets;
+    return this._publishedPet;
   }
 
   set publishedPet(pet) {
-    this._publishedPets = pet;
+    this._publishedPet = pet;
   }
 
-  private _publishedPets;
+  private _publishedPet: IPublishedPet;
 
-  constructor() { }
+  constructor() {
+    this._publishedPet = {
+      name: "",
+      breed: "",
+      duration: ""
+    }
+  }
 }
 
 export interface IPublishedPet {
