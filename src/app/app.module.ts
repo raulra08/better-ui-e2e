@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { MyDogSitterComponent } from './hole-one/my-dog-sitter.component';
+import { HoleOneComponent } from './hole-one/hole-one.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {HoleTwoComponent} from "./hole-two/hole-two.component";
 
 @NgModule({
   declarations: [
-    MyDogSitterComponent
+    HoleOneComponent,
+    HoleTwoComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [MyDogSitterComponent]
+  bootstrap: [HoleTwoComponent]
 })
 export class AppModule { }

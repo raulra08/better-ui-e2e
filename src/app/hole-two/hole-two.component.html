@@ -1,0 +1,48 @@
+<div class="container">
+    <h1>
+        Welcome to {{ title }}!
+    </h1>
+</div>
+<div class="container">
+    <h2>
+        Publish
+    </h2>
+    <form [formGroup]="petsForm" (ngSubmit)="onSubmit(petsForm.value)">
+        <div class="form-group">
+            <label id="mds-dog-name-form-label">Dog's Name</label>
+            <input id="mds-dog-name-form-input" formControlName="name" type="text" class="form-control" placeholder="Gia">
+        </div>
+        <div class="form-group">
+            <label id="mds-dog-breed-form-label">Dog's Breed</label>
+            <select class="form-control" id="mds-dog-breed-form-select" formControlName="breed">
+                <option id="mds-dog-breed-option-1">Beagle</option>
+                <option id="mds-dog-breed-option-2">Labrador</option>
+                <option id="mds-dog-breed-option-3">Golden Retriever</option>
+                <option id="mds-dog-breed-option-4">Cocker Spaniel</option>
+                <option id="mds-dog-breed-option-5">Hungarian Viszla</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label id="mds-dog-duration-form-label">Care duration</label>
+            <select class="form-control" id="mds-dog-duration-form-select" formControlName="duration">
+                <option id="mds-dog-duration-option-1">1/2 day</option>
+                <option id="mds-dog-duration-option-2">1 day</option>
+                <option id="mds-dog-duration-option-3">1 weekend</option>
+                <option id="mds-dog-duration-option-4">1 week</option>
+                <option id="mds-dog-duration-option-5">2 weeks</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" id="mds-publish-button">Publish</button>
+    </form>
+    <div class="row">
+        <div class="col-sm">
+            <label id="mds-dog-name-label" >{{sharedStoreService.publishedPet.name}}</label>
+        </div>
+        <div class="col-sm">
+            <label id="mds-dog-breed-label">{{sharedStoreService.publishedPet.breed}}</label>
+        </div>
+        <div class="col-sm">
+            <label id="mds-dog-duration-label">{{sharedStoreService.publishedPet.duration}}</label>
+        </div>
+    </div>
+</div>
