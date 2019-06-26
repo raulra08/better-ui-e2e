@@ -19,14 +19,15 @@ describe("Given Vera Gile booked holidays for 2 weeks And Vera has 2 dogs", () =
             page.publish();
             const fiddoDuration: Promise<string> = page.readDuration();
             const fiddoName: Promise<string> = page.readDogName();
-            const fiddoBreed: Promise<string> = page.readDogName();
+            const fiddoBreed: Promise<string> = page.readBreed();
 
             page.enterDogsName("Didi");
             page.selectBreed();
             page.selectDuration();
             page.publish();
+
             const didiName: Promise<string> = page.readDogName();
-            const didiBreed: Promise<string> = page.readDogName();
+            const didiBreed: Promise<string> = page.readBreed();
             const didiDuration: Promise<string> = page.readDuration();
 
             expect(fiddoName).toEqual("Fiddo");
@@ -34,7 +35,7 @@ describe("Given Vera Gile booked holidays for 2 weeks And Vera has 2 dogs", () =
             expect(fiddoDuration).toEqual("2 weeks");
 
             expect(didiName).toEqual("Didi");
-            expect(didiBreed).toEqual("Hungarian Viszla");
+            expect(didiBreed).toEqual("Cocker Spaniel");
             expect(didiDuration).toEqual("2 weeks");
         });
 

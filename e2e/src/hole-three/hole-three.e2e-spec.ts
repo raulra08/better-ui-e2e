@@ -1,4 +1,3 @@
-import {by, element} from "protractor";
 import {HoleThreePage} from "./hole-three.po";
 
 let page: HoleThreePage;

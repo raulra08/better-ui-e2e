@@ -7,8 +7,10 @@ export class HoleFourPage {
     private durationOption: ElementFinder = element(by.id("mds-dog-duration-option-5"));
     private publishForm: ElementFinder = element(by.id("mds-publish-button"));
     private duration: ElementFinder = element(by.id("mds-dog-duration-label"));
+    private dogName: ElementFinder = element(by.id("mds-dog-name-label"));
+    private breed: ElementFinder = element(by.id("mds-dog-breed-label"));
     private breedDropdown: ElementFinder = element(by.id("mds-dog-breed-form-select"));
-    private breedOption: ElementFinder = element(by.id("mds-dog-breed-option-1"));
+    private breedOption: ElementFinder = element(by.id("mds-dog-breed-option-4"));
 
     navigateTo() {
         return browser.get(browser.baseUrl) as Promise<any>;
@@ -36,7 +38,12 @@ export class HoleFourPage {
         return this.duration.getText() as Promise<string>;
     }
 
-    readDogName() {
-        return this.duration.getText() as Promise<string>;
+    readDogName(): Promise<string> {
+        return this.dogName.getText() as Promise<string>;
+    }
+
+    readBreed(): Promise<string> {
+        return this.breed.getText() as Promise<string>;
+
     }
 }
