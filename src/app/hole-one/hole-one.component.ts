@@ -3,11 +3,10 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 import {IPublishedPet, SharedStoreService} from "../core/shared-store.service";
 
 @Component({
-  selector: "my-dog-sitting",
-  templateUrl: "./my-dog-sitter.component.html",
-  styleUrls: ["./my-dog-sitter.component.css"]
+  selector: "hole-one",
+  templateUrl: "./hole-one.component.html"
 })
-export class MyDogSitterComponent implements OnInit {
+export class HoleOneComponent implements OnInit {
 
   title = "My Dog Sitter";
   petsForm: FormGroup;

@@ -1,5 +1,5 @@
 import {async, TestBed} from '@angular/core/testing';
-import {MyDogSitterComponent} from './my-dog-sitter.component';
+import {HoleOneComponent} from './hole-one.component';
 import {FormBuilder, ReactiveFormsModule} from "@angular/forms";
 import {IPublishedPet, SharedStoreService} from "../core/shared-store.service";
 
@@ -15,7 +15,7 @@ describe("The DogSitterAppComponent", () => {
 
             TestBed.configureTestingModule({
                 declarations: [
-                    MyDogSitterComponent
+                    HoleOneComponent
                 ],
                 imports: [
                     ReactiveFormsModule
@@ -28,7 +28,7 @@ describe("The DogSitterAppComponent", () => {
         }));
 
         it('should create the app', () => {
-            const fixture = TestBed.createComponent(MyDogSitterComponent);
+            const fixture = TestBed.createComponent(HoleOneComponent);
             const app = fixture.debugElement.componentInstance;
             expect(app).toBeTruthy();
         });
@@ -41,7 +41,7 @@ describe("The DogSitterAppComponent", () => {
                 const sharedStoreService: SharedStoreService = new SharedStoreService();
                 const somePet: IPublishedPet = {name: "", breed: "", duration: ""};
 
-                const component: MyDogSitterComponent = new MyDogSitterComponent(sharedStoreService, new FormBuilder());
+                const component: HoleOneComponent = new HoleOneComponent(sharedStoreService, new FormBuilder());
 
                 component.onSubmit(somePet);
                 expect(sharedStoreService.publishedPet).toBeDefined();

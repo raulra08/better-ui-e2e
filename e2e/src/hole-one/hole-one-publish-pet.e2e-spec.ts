@@ -13,7 +13,9 @@ describe("Given Freddy Fastfinger opens the duration dropdown menu", () => {
             element(by.id("mds-dog-duration-form-select")).click();
             element(by.id("mds-dog-duration-option-5")).click();
             element(by.css("form")).click();
-            expect(element(by.id("mds-dog-duration-label")).getText()).toEqual("2 weeks");
+
+            const duration: Promise<string> = element(by.id("mds-dog-duration-label")).getText() as Promise<string>;
+            expect(duration).toEqual("2 weeks");
         });
 
     });
