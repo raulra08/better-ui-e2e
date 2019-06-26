@@ -3,7 +3,7 @@ import {browser, by, element, ElementFinder} from 'protractor';
 export class MyDogSitterPage {
 
   private dogNameInput: ElementFinder = element(by.id("mds-dog-name-form-input"));
-  private publishForm: ElementFinder = element(by.css("form"));
+  private publishForm: ElementFinder = element(by.id("mds-publish-button"));
   private duration: ElementFinder = element(by.id("mds-dog-duration-label"));
   private breedDropdown: ElementFinder = element(by.id("mds-dog-breed-form-select"));
   private durationDropdown: ElementFinder = element(by.id("mds-dog-duration-form-select"));
@@ -20,7 +20,7 @@ export class MyDogSitterPage {
 
   selectBreed(): Promise<void> {
     this.breedDropdown.click();
-    return this.breedOption.click() as Promise <void>;
+    return this.breedOption.click() as Promise<void>;
   }
 
   selectDuration(): Promise<void> {

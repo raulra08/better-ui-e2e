@@ -4,11 +4,11 @@ beforeAll(() => {
     browser.get(browser.baseUrl) as Promise<any>;
 });
 
-describe("Given Freddy Fastfinger booked holidays for 2 weeks", () => {
+describe("Given Freddy Fastfinger opens the duration dropdown menu", () => {
 
-    describe("When Freddy publishes Gia the beagle for dog-sitting", () => {
+    describe("When Freddy clicks on '2 weeks'", () => {
 
-        it("Then Gia should be listed for a duration of 2 weeks", () => {
+        it("Then Freddy should see the text '2 weeks'", () => {
 
             element(by.id("mds-dog-duration-form-select")).click();
             element(by.id("mds-dog-duration-option-5")).click();
