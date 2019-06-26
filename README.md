@@ -37,29 +37,66 @@ A scenario is an example of the system's behaviour from one or more user's persp
 
 ### Exercises
 
-1. Phrase this in "Given, When, Then" format:"Robinson Crusoe" and "Treasure Island" are both classics. 
-    ```
-    If I've got "Robinson Crusoe" in my basket and I go to checkout, 
-    it should recommend "Treasure Island" to me too.
-    ```
-2. Rephrase this scenario so that it doesn't make any reference to GUI elements.
-    ```
-    Given I clicked the buy button for "Robinson Crusoe" at 12.95
-    And I'm on the "checkout" page
-    And postage is 3.00
-    When I click "purchase"
-    Then I should see the text "Than You, Your purchase is on its way!"
-    And I should see the text "Total cost: 15.95". 
-    ```
-    Bonus: have a discussion on what could you do that might help you avoid this kind of language?
-3. Change the outcomes (Then) so that they include the word "should".
-    ```
-    Given "Taxi Uno" is the only car available at 12:30pm 
-    When Alice books a taxi for 12:30pm
-    Then "Taxi Uno" gets an email that he's been booked for 12:30pm
-    And Alice must get a confirmation email. 
-    ```
-    Bonus: Why might that be useful?
+1. Phrase this in “Given, When, Then” format:
+ 
+ ```
+“Robinson Crusoe” and” Treasure Island” are both classics. If I’ve got “Robinson Crusoe” in my basket and I go to the checkout, it should recommend “Treasure Island” to me too.
+ ```
+ 
+2. Rephrase this scenario so that it doesn’t make any reference to GUI elements. 
+ 
+ ```
+Given I clicked the buy button for “Robinson Crusoe” at £12.95
+And I’m on the “checkout” page
+And postage is £3.00
+When I click “purchase”
+Then I should see the text “Thank you! Your purchase is on its way!”
+And I should see the text “Total cost: £15.95”.
+ ```
+ 
+ ```
+ Discussion: What could you do that might help you avoid this kind of language?
+  ```
+
+3. Fix the context (Given) so that it appears in the past tense.
+ 
+ ```
+ Given Ann Ambitious books “Meeting with Pat Punctual” at 4:00pm for 1 hour
+When she books “Getting haircut” at 3:45pm for 30 minutes
+Then we should warn her that her appointments overlap.
+ ```
+ 
+4. Change the outcomes (Then) so that they include the word “should”. 
+ 
+ ```
+ Given “U1 SKC” is the only car available at 12:30pm
+When Laura Londoner books a taxi for 12:30pm
+Then “U1 SKC” gets an email that he’s been booked for 12:30pm
+And Laura Londoner must get a confirmation email.
+ ```
+ 
+  ```
+Discussion: Why might it be useful to include the word “should”?
+ ```
+ 
+5. Refactor the event (When) so that the context (Given) is in its own step.
+ 
+ ```
+When Petunia Picky tells that she didn’t like the “Early Grey Coffee” we sent her
+Then we should skip it in her rotation.
+ ```
+ 
+6. Refactor the event (When) and create two scenarios.
+ 
+ ``` 
+Given customers who bought Imogen Heap’s “Sparks” also bought “Speak for Yourself” and “Ellipse”
+When Emma Excited buys “Sparks” or “Ellipse”
+Then she should be recommended “Speak for Yourself” too.
+ ```
+ 
+ ```
+Discussion: why wouldn’t you automate both, if the information you have below is all you’ve got?
+ ```
 
 
 # Dog Sitter App
