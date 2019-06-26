@@ -17,7 +17,7 @@ import {HoleFourComponent} from "./hole-four/hole-four.component";
         ReactiveFormsModule
     ],
     providers: [],
-    bootstrap: [HoleTwoComponent]
+    bootstrap: [HoleOneComponent]
 })
 export class AppModule {
 }
